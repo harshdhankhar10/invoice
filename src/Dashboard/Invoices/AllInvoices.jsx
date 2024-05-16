@@ -163,7 +163,7 @@ const AllInvoices = () => {
                                             </tr>
                                         ))}
                                     </tbody>
-                                </table>
+                                </table>                            
                             ) : (
                                 <div className="text-center p-8">
                                     <h2 className="text-xl font-semibold mb-4">No Invoices Found</h2>

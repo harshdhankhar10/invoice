@@ -4,6 +4,8 @@ import { FaHome, FaFileInvoice, FaPlusSquare, FaCog, FaSignOutAlt, FaUserCircle,
 import { signOut,onAuthStateChanged } from 'firebase/auth';
 import { toast } from 'react-toastify';
 import { app,auth } from '../Firebase/Firebase';
+import { FaBars } from "react-icons/fa";
+
 const Sidebar = () => {
   const navigate = useNavigate();
   const logoutWeb = async () => {
@@ -57,12 +59,14 @@ const Sidebar = () => {
 
 const NavItem = ({ to, icon, text }) => {
   return (
+    <>
     <li className="mb-2">
       <Link to={to} className="flex items-center py-2 px-4 text-gray-300 hover:text-white hover:bg-gray-800 rounded">
         {icon}
         <span className="ml-2">{text}</span>
       </Link>
     </li>
+    </>
   );
 }
 
